@@ -1,13 +1,14 @@
 package com.chaty.chatty.user;
 
 import org.springframework.stereotype.Component;
-
 import javax.servlet.http.HttpSessionBindingEvent;
 import javax.servlet.http.HttpSessionBindingListener;
 import java.util.List;
 
 @Component
 public class LoggedUser implements HttpSessionBindingListener {
+    String username;
+
 
     public String getUsername() {
         return username;
@@ -17,7 +18,7 @@ public class LoggedUser implements HttpSessionBindingListener {
         this.username = username;
     }
 
-    private String username;
+
     private ActiveUserStore activeUserStore;
 
     public LoggedUser(String username, ActiveUserStore activeUserStore) {
@@ -25,7 +26,8 @@ public class LoggedUser implements HttpSessionBindingListener {
         this.activeUserStore = activeUserStore;
     }
 
-    public LoggedUser() {}
+    public LoggedUser() {
+    }
 
     @Override
     public void valueBound(HttpSessionBindingEvent event) {
@@ -43,5 +45,6 @@ public class LoggedUser implements HttpSessionBindingListener {
         if (users.contains(user.getUsername())) {
             users.remove(user.getUsername());
         }
+
     }
 }
