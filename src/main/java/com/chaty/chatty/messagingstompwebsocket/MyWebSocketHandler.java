@@ -13,11 +13,6 @@ public class MyWebSocketHandler extends TextWebSocketHandler {
             throws Exception {
 
         String clientMessage = message.getPayload();
-
-        ///if (clientMessage.startsWith("Hello") || clientMessage.startsWith("Hi")) {
-            session.sendMessage(new TextMessage(clientMessage));
-       //// } else {
-            //session.sendMessage(
-           ///         new TextMessage("This is a simple hello world example of using Spring WebSocket."));
-        ///}
-    }}
+        session.sendMessage(new TextMessage(clientMessage));
+    }
+}

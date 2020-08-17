@@ -34,16 +34,18 @@
 <hr />
 <label>Message</label>
 <br>
-<textarea rows="8" cols="50" id="clientMsg"></textarea>
+<textarea rows="8" cols="8" id="clientMsg"></textarea>
 <br>
 <button onclick="send()">Send</button>
 <br>
 <label>Message</label>
 <br>
-<textarea rows="8" cols="50" id="serverMsg" readonly="readonly"></textarea>
+<textarea rows="8" cols="8" id="serverMsg" readonly="readonly"></textarea>
 <br>
 
-
+<br>
+<a href="<c:url value='/login' />">Click here to login</a>
+<br>
 <br>
 <a href="<c:url value='/logout' />">Click here to logout</a>
 <br>
