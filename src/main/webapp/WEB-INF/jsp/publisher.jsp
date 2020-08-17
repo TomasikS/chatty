@@ -30,18 +30,43 @@
 </head>
 <body>
 
-
+<br>
 <hr />
+<br>
+
+USER
+<br>
+
+<label for="user"  id ="lstRightListBox"    >user:</label><br>
+  <h3>   </h3>
+
+</label>
+
+<br>
+
+
+
 <label>Message</label>
 <br>
 <textarea rows="8" cols="8" id="clientMsg"></textarea>
 <br>
 <button onclick="send()">Send</button>
 <br>
+USER
+<br>
+
+<label for="user"  id ="lstRightListBox"    >user:</label><br>
+  <h3>   </h3>
+
+</label>
+
+
 <label>Message</label>
 <br>
 <textarea rows="8" cols="8" id="serverMsg" readonly="readonly"></textarea>
 <br>
+
+<button onclick="send()">Send</button>
 
 <br>
 <a href="<c:url value='/login' />">Click here to login</a>
