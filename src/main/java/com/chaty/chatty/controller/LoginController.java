@@ -42,14 +42,15 @@ public class LoginController {
         return "redirect:/";
     }
 
-    @RequestMapping(value = "/username", method = RequestMethod.GET   )
+    @RequestMapping(value = "/users", method = RequestMethod.GET   )
     @ResponseBody
     public ModelAndView currentUserName(Principal principal, Model model ) {
 
         List list = new ArrayList<String>();
         list.add(principal.getName() );
         model.addAttribute("counts",list);
-        return new ModelAndView("users");
+         return new ModelAndView("index");
+
     }
 
 }

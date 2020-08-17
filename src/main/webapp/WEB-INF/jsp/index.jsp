@@ -13,9 +13,19 @@
 
 
 <%@ include file="publisher.jsp" %>
+
+
 <body>
-
-
+<div th:if="${not #lists.isEmpty(counts)}">
+    <h2>Users</h2>
+    <table class="table table-striped">
+    <c:forEach items="${counts}" var="element">
+      <tr>
+        <td>${element}</td>
+</tr>
+    </c:forEach>
+    </table>
+</div>
 
 </body>
 </html>
